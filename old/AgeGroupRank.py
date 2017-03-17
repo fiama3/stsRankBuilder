@@ -111,5 +111,4 @@ def rankSingolaGara(racename, rusultsfilepath, pointsfilepath):
 	#Cambio il nome delle colonne
 	df_man_rank_pergusa_final.columns = ['Full Name', 'Pts ' + racename]
 
-
     return df_man_rank_pergusa_final
