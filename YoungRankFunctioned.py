@@ -28,6 +28,7 @@ def rankSingolaGara(racename, rusultsfilepath, pointsfilepath):
 		df_rank_race_final.columns = ['Full Name', 'Category', 'Club', 'Pts ' + racename]
 	else:
 		df_rank_race_final = pd.DataFrame(columns=['Full Name', 'Category', 'Club','Pts ' + racename])
+
 	return df_rank_race_final
 
 def calcolaTotale(df_rank_total, races):
@@ -49,7 +50,7 @@ def mergeGare(df_rank_races_final):
 
 	#Faccio merge di tutte le gare
 	for (i, df_race) in enumerate(df_rank_races_final):
-		df_rank_total = df_rank_total.merge(pd.DataFrame(df_race), on=['Full Name', 'Category', 'Club'], how='outer')
+		df_rank_total = df_rank_total.merge(pd.DataFrame(df_race), on=['Full Name', 'Category'], how='outer')
 
 	#Elimino colonna Pts aggiunta per tracchiggio
 	df_rank_total = df_rank_total.drop('Pts',1)
@@ -60,7 +61,7 @@ def mergeGare(df_rank_races_final):
 
 
 #Creo la lista delle gare
-races = [['Pergusa','dataIn/resultsyoungPergusa.xlsx'],['Marina di Modica','dataIn/resultsyoungMarinadimodica.xlsx'],['Cefalù','dataIn/resultsyoungCefalu.xlsx'],['Augusta','dataIn/resultsyoungAugusta.xlsx'],['Catania','dataIn/resultsyoungCatania.xlsx']]
+races = [['Pergusa','dataIn/resultsyoungPergusa.xlsx'],['Cefalu','dataIn/resultsyoungCefalu.xlsx'],['Marina di Modica','dataIn/resultsyoungMarinadimodica.xlsx'],['Augusta','dataIn/resultsyoungAugusta.xlsx'],['Catania','dataIn/resultsyoungCatania.xlsx']]
 df_young_rank_race_final = []
 #Creo i dataframe delle singole gare per uomini e donne
 for (i, race) in enumerate(races):

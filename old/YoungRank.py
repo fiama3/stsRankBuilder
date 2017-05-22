@@ -48,4 +48,4 @@ df_young_rank_total = df_young_rank_total.sort_values(['Category', 'Total'], asc
 #print(df_woman_rank_pergusa_final)
 print(df_young_rank_total)
 
-df_young_rank_total.to_excel('TotalRankYoung.xlsx', index=False) 
+df_young_rank_total.to_excel('TotalRankYoung.xlsx', index=True) 

@@ -65,7 +65,7 @@ def mergeGare(df_rank_races_final):
 
 
 #Creo la lista delle gare
-races = [['Pergusa','dataIn/resultsmanPergusa.xlsx','dataIn/resultswomanPergusa.xlsx'],['Marzamemi','dataIn/resultsmanMarzamemi.xlsx','dataIn/resultswomanMarzamemi.xlsx'],['Marina di Modica','dataIn/resultsmanMarinadimodica.xlsx','dataIn/resultswomanMarinadimodica.xlsx'],['Cefalù','dataIn/resultsmanCefalu.xlsx','dataIn/resultswomanCefalu.xlsx'],['Etna','dataIn/resultsmanEtna.xlsx','dataIn/resultswomanEtna.xlsx'],['Augusta','dataIn/resultsmanAugusta.xlsx','dataIn/resultswomanAugusta.xlsx'],['Catania','dataIn/resultsmanCatania.xlsx','dataIn/resultswomanCatania.xlsx']]
+races = [['Pergusa','dataIn/resultsmanPergusa.xlsx','dataIn/resultswomanPergusa.xlsx'],['Marzamemi','dataIn/resultsmanMarzamemi.xlsx','dataIn/resultswomanMarzamemi.xlsx'],['Marina di Modica','dataIn/resultsmanMarinadimodica.xlsx','dataIn/resultswomanMarinadimodica.xlsx'],['Cefalu','dataIn/resultsmanCefalu.xlsx','dataIn/resultswomanCefalu.xlsx'],['Etna','dataIn/resultsmanEtna.xlsx','dataIn/resultswomanEtna.xlsx'],['Augusta','dataIn/resultsmanAugusta.xlsx','dataIn/resultswomanAugusta.xlsx'],['Catania','dataIn/resultsmanCatania.xlsx','dataIn/resultswomanCatania.xlsx']]
 df_man_rank_race_final = []
 df_woman_rank_race_final = []
 #Creo i dataframe delle singole gare per uomini e donne
