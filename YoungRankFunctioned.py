@@ -61,16 +61,17 @@ def mergeGare(df_rank_races_final):
 
 
 #Creo la lista delle gare
-races = [['Pergusa','dataIn/resultsyoungPergusa.xlsx'],['Cefalu','dataIn/resultsyoungCefalu.xlsx'],['Marina di Modica','dataIn/resultsyoungMarinadimodica.xlsx'],['Augusta','dataIn/resultsyoungAugusta.xlsx'],['Catania','dataIn/resultsyoungCatania.xlsx']]
+my_path = os.path.abspath(os.path.dirname(__file__))
+races = [['Pergusa', my_path+'/dataIn/resultsyoungPergusa.xlsx'],['Cefalu', my_path+'/dataIn/resultsyoungCefalu.xlsx'],['Augusta', my_path+'/dataIn/resultsyoungAugusta.xlsx'],['Marina di Modica', my_path+'/dataIn/resultsyoungMarinadimodica.xlsx'],['Catania', my_path+'/dataIn/resultsyoungCatania.xlsx']]
 df_young_rank_race_final = []
 #Creo i dataframe delle singole gare per uomini e donne
 for (i, race) in enumerate(races):
-	df_young_rank_race_final.append(rankSingolaGara(race[0], race[1], 'dataIn/pointsyoung.xlsx'))
+	print(race[1])
+	df_young_rank_race_final.append(rankSingolaGara(race[0], race[1], my_path+'/dataIn/pointsyoung.xlsx'))
 
 #Calcolo il dataframe totale per uomini e donne
 df_young_rank_total = mergeGare(df_young_rank_race_final)
 df_young_rank_total = calcolaTotale(df_young_rank_total, races)
 
 #Salvo in file (sovrascrivo)
-print(df_young_rank_total)
-df_young_rank_total.to_excel('TotalRankGiovani.xlsx', index=False)
+df_young_rank_total.to_excel(my_path+'/TotalRankGiovani.xlsx', index=False)
